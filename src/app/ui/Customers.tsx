@@ -5,12 +5,12 @@ import Image from "next/image";
 import { Typography } from "@material-tailwind/react";
 
 const COMPANIES = [
-  "coinbase",
-  "spotify",
-  "pinterest",
-  "google",
-  "amazon",
-  "netflix",
+  "indolakto.jpg",
+  "maspion.png",
+  "mayora.jpg",
+  "nabati.jpg",
+  "pia.jpeg",
+  "pondan.jpeg",
 ];
 
 function Customers() {
@@ -31,9 +31,9 @@ function Customers() {
               width={768}
               height={768}
               key={key}
-              src={`/logos/logo-${logo}.svg`}
+              src={`/image/customers/${logo}`}
               alt={logo}
-              className="w-40 grayscale opacity-75"
+              className="w-40  opacity-75"
             />
           ))}
         </div>

@@ -1,11 +1,9 @@
 import Hero from "./ui/Hero";
-import { Stats } from "./ui/Stats";
+import  Stats from "./ui/Stats";
 import Category from "./ui/Category";
 import Products from "./ui/Product";
 import Feedback from "./ui/Feedback";
 import Customers from "./ui/Customers";
-import Footer from "@/components/Footer";
-
 
 export default function Home() {
 
@@ -18,7 +16,7 @@ export default function Home() {
       <Products />
       <Feedback />
       <Customers />
-      <Footer/>
+     
     </>
   );
 }

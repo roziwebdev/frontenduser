@@ -1,17 +1,18 @@
+"use client"
 import { Typography, Button, Input } from "@material-tailwind/react";
 
 const LINKS = [
   {
     title: "Company",
-    items: ["About Us", "Careers", "Premium Tools", "Blog"],
+    items: ["About Us", "Careers",  "Blog"],
   },
   {
     title: "Pages",
-    items: ["Login", "Register", "Add List", "Contact"],
+    items: ["Home", "Shop", "Contact"],
   },
   {
     title: "Legal",
-    items: ["Terms", "Privacy", "Team", "About Us"],
+    items: ["Terms", "Privacy", "Team"],
   },
 ];
 
@@ -19,7 +20,7 @@ const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
   return (
-    <footer className="px-8 pt-24 pb-8">
+    <footer className="px-8 pt-12 pb-8 bg-gray-200">
       <div className="container max-w-6xl flex flex-col mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 !w-full ">
           <div className="flex col-span-2 items-center gap-10 mb-10 lg:mb-0 md:gap-36">
@@ -72,19 +73,6 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <Typography
-          color="blue-gray"
-          className="md:text-center mt-16 font-normal !text-gray-700"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        >
-          &copy; {CURRENT_YEAR} Made with{" "}
-          <a href="https://www.material-tailwind.com" target="_blank">
-            Material Tailwind
-          </a>{" "}
-          by{" "}
-          <a href="https://www.creative-tim.com" target="_blank">
-            Creative Tim
-          </a>
-          .
-        </Typography>
       </div>
     </footer>
   );

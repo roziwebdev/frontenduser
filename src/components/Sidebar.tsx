@@ -29,7 +29,7 @@ export function Sidebar({ isDrawerOpen, closeDrawer }: SidebarProps) {
   };
 
   return (
-    <Drawer overlay={false} open={isDrawerOpen} onClose={closeDrawer} placement="right" className="p-4" size={380}  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+    <Drawer overlay={false} open={isDrawerOpen} onClose={closeDrawer} placement="right" className="p-4 w-full" size={380}   placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
       <Card color="transparent" shadow={false} className="h-[calc(100vh-2rem)] w-full p-4"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         <div className="flex justify-between items-center mb-4">
           <Typography variant="h4" color="blue-gray" className="font-bold"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>

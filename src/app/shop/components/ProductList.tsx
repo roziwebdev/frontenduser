@@ -11,7 +11,7 @@ export function ProductList() {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [limit, setLimit] = useState(5); // To control number of products per page
+  const [limit, setLimit] = useState(6); // To control number of products per page
   const [searchTerm, setSearchTerm] = useState("");
 
   // Function to fetch products with search and pagination
@@ -132,7 +132,14 @@ export function ProductList() {
               page === 0 ? (
                 <span key={index} className="text-gray-500">...</span>
               ) : (
-                <IconButton placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} key={page} >
+                <IconButton 
+                placeholder={undefined} 
+                onPointerEnterCapture={undefined} 
+                onPointerLeaveCapture={undefined} 
+                key={page} 
+                variant={currentPage === page ? "filled" : "text"}
+                color="gray" // Use a valid color value
+                onClick={() => setCurrentPage(page)} >
                   {page}
                 </IconButton>
               )
