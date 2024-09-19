@@ -29,18 +29,18 @@ export function Sidebar({ isDrawerOpen, closeDrawer }: SidebarProps) {
   };
 
   return (
-    <Drawer overlay={false} open={isDrawerOpen} onClose={closeDrawer} placement="right" className="p-4" size={380}>
-      <Card color="transparent" shadow={false} className="h-[calc(100vh-2rem)] w-full p-4">
+    <Drawer overlay={false} open={isDrawerOpen} onClose={closeDrawer} placement="right" className="p-4" size={380}  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+      <Card color="transparent" shadow={false} className="h-[calc(100vh-2rem)] w-full p-4"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         <div className="flex justify-between items-center mb-4">
-          <Typography variant="h4" color="blue-gray" className="font-bold">
+          <Typography variant="h4" color="blue-gray" className="font-bold"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             Your Cart
           </Typography>
-          <IconButton variant="text" onClick={closeDrawer}>
+          <IconButton variant="text" onClick={closeDrawer}  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             <XMarkIcon className="h-6 w-6" />
           </IconButton>
         </div>
         {items.length === 0 ? (
-          <Typography className="text-center text-gray-500">No items in cart</Typography>
+          <Typography className="text-center text-gray-500"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>No items in cart</Typography>
         ) : (
           <div className="flex flex-col h-full justify-between">
             <ul className="overflow-y-auto space-y-4">
@@ -49,17 +49,16 @@ export function Sidebar({ isDrawerOpen, closeDrawer }: SidebarProps) {
                   {/* Product Image */}
                   <Image src={item.image} alt={item.name} width={64} height={64} className="object-cover rounded-md" />
                   <div className="flex-1">
-                    <Typography variant="h6" className="font-medium">
+                    <Typography variant="h6" className="font-medium"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                       {item.name}
                     </Typography>
-                    <Typography className="text-gray-500 text-sm">Rp.{item.price}</Typography>
+                    <Typography className="text-gray-500 text-sm"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>Rp.{item.price}</Typography>
                     <div className="flex items-center mt-2 space-x-2">
                       <Button
                         size="sm"
                         variant="text"
                         className="text-gray-500 hover:text-gray-700"
-                        onClick={() => decreaseQuantity(item.id)}
-                      >
+                        onClick={() => decreaseQuantity(item.id)} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                      >
                         −
                       </Button>
                       {/* Quantity Input */}
@@ -74,34 +73,31 @@ export function Sidebar({ isDrawerOpen, closeDrawer }: SidebarProps) {
                         size="sm"
                         variant="text"
                         className="text-gray-500 hover:text-gray-700"
-                        onClick={() => increaseQuantity(item.id)}
-                      >
+                        onClick={() => increaseQuantity(item.id)} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                      >
                         +
                       </Button>
                     </div>
                   </div>
-                  <IconButton size="sm" variant="text" onClick={() => removeFromCart(item.id)}>
+                  <IconButton size="sm" variant="text" onClick={() => removeFromCart(item.id)} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                     ✕
                   </IconButton>
                 </li>
               ))}
             </ul>
             <div className="mt-4">
-              <Typography variant="h5" className="font-semibold mb-2">
+              <Typography variant="h5" className="font-semibold mb-2" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                 Total: Rp.{total.toFixed(2)}
                 </Typography>
                 <div className="flex gap-1">
                     <Button
-                      onClick={handleCheckout}
-                      className="w-full bg-blue-gray-900 hover:bg-gray-600 text-white rounded-md mb-2"
-                    >
+                    onClick={handleCheckout}
+                    className="w-full bg-blue-gray-900 hover:bg-gray-600 text-white rounded-md mb-2"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                    >
                       Checkout
                     </Button>
                     {/* Clear Cart Button */}
                     <Button
-                      onClick={clearCart}
-                      className="h-full  bg-red-500 hover:bg-red-600 text-white rounded-md"
-                    >
+                    onClick={clearCart}
+                    className="h-full  bg-red-500 hover:bg-red-600 text-white rounded-md"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                    >
                       <TrashIcon className="w-4"/>
                     </Button>
                 </div>

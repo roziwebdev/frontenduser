@@ -1,10 +1,9 @@
 // components/ProductList.tsx
 "use client";
 
-import { Typography, Button, Input, Select, IconButton } from "@material-tailwind/react";
+import { Typography, Button, Input, IconButton, TypographyProps } from "@material-tailwind/react";
 import ProductCard from "@/components/ProductCard";
 import { useCallback, useEffect, useState } from "react";
-import { useCartStore } from "@/store/cartStore";
 import { ArrowRightIcon, ArrowLeftIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 export function ProductList() {
@@ -14,7 +13,6 @@ export function ProductList() {
   const [totalPages, setTotalPages] = useState(1);
   const [limit, setLimit] = useState(5); // To control number of products per page
   const [searchTerm, setSearchTerm] = useState("");
-  const addToCart = useCartStore((state) => state.addToCart);
 
   // Function to fetch products with search and pagination
   const fetchProducts = useCallback(async (page: number, limit: number, search: string) => {
@@ -85,7 +83,7 @@ export function ProductList() {
   return (
     <section className="px-4 py-6 max-w-7xl mx-auto">
       <div className="mb-8">
-        <Typography variant="h3" className="text-center mb-6">
+        <Typography variant="h3" className="text-center mb-6"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} >
           Product List
         </Typography>
         <Input
@@ -95,8 +93,7 @@ export function ProductList() {
           placeholder="Search products..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full   mx-auto  border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
-        />
+          className="w-full   mx-auto  border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined}        />
       </div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {loading ? (
@@ -124,7 +121,9 @@ export function ProductList() {
             className="flex items-center gap-2"
             onClick={prev}
             disabled={currentPage === 1}
-          >
+            placeholder={undefined}
+            onPointerEnterCapture={undefined} 
+            onPointerLeaveCapture={undefined}          >
             <ArrowLeftIcon strokeWidth={2} className="h-4 w-4" />
             Previous
           </Button>
@@ -133,7 +132,7 @@ export function ProductList() {
               page === 0 ? (
                 <span key={index} className="text-gray-500">...</span>
               ) : (
-                <IconButton key={page} {...getItemProps(page)}>
+                <IconButton placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} key={page} >
                   {page}
                 </IconButton>
               )
@@ -144,7 +143,7 @@ export function ProductList() {
             className="flex items-center gap-2"
             onClick={next}
             disabled={currentPage === totalPages}
-          >
+            placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             Next
             <ArrowRightIcon strokeWidth={2} className="h-4 w-4" />
           </Button>

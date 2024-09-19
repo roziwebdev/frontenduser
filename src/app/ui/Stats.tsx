@@ -42,13 +42,12 @@ export function Stats() {
     <section className="px-8 pt-60">
       <div className="container mx-auto text-center lg:text-left">
         <div className="grid place-items-center text-center">
-          <Typography variant="h2" color="blue-gray" className="mb-2 text-4xl">
+          <Typography variant="h2" color="blue-gray" className="mb-2 text-4xl"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             Explore Our Impressive Stats
           </Typography>
           <Typography
             variant="lead"
-            className="mx-auto mb-24 w-full !text-gray-500 lg:w-5/12"
-          >
+            className="mx-auto mb-24 w-full !text-gray-500 lg:w-5/12" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}          >
           We are proud of our commitment to excellence and our dedication to customer service.
           </Typography>
         </div>

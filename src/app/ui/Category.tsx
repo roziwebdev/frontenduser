@@ -2,7 +2,6 @@
 
 import React from "react";
 import {
-  Button,
   Typography,
   Card,
   CardBody,
@@ -50,18 +49,17 @@ export function Category() {
   return (
     <section className="container mx-auto px-8 py-36">
       <div className="mb-20 grid place-items-center text-center">
-        <Typography variant="h2" color="blue-gray" className="my-3">
+        <Typography variant="h2" color="blue-gray" className="my-3"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
           Products Categories
         </Typography>
-        <Typography variant="lead" className="!text-gray-500 lg:w-6/12">
+        <Typography variant="lead" className="!text-gray-500 lg:w-6/12"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         Choice of categories with various types of paper so as not to limit customers in choosing needs that suit their products
         </Typography>
       </div>
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <Card
           color="gray"
-          className="relative grid h-full w-full place-items-center overflow-hidden text-center"
-        >
+          className="relative grid h-full w-full place-items-center overflow-hidden text-center"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        >
           <Image
             width={768}
             height={768}
@@ -70,14 +68,13 @@ export function Category() {
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 h-full w-full bg-gray-900/75" />
-          <CardBody className="relative w-full">
-            <Typography variant="h4" className="mt-9" color="white">
+          <CardBody className="relative w-full"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <Typography variant="h4" className="mt-9" color="white"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
               Premium Glossy Paper
             </Typography>
             <Typography
               color="white"
-              className="mt-4 mb-14 font-normal opacity-50"
-            >
+              className="mt-4 mb-14 font-normal opacity-50"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}            >
               Glossy Photo Paper, also known as High Glossy, is a type of paper that produces shiny printing results
             </Typography>
 

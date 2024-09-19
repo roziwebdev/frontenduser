@@ -43,8 +43,7 @@ function NavItem({ children, href }: NavItemProps) {
           as="span" // Mengganti "a" dengan "span" karena Link sudah menangani navigasi
           variant="paragraph"
           color="gray"
-          className="flex items-center gap-2 font-medium text-gray-900"
-        >
+          className="flex items-center gap-2 font-medium text-gray-900" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        >
           {children}
         </Typography>
       </Link>
@@ -77,8 +76,7 @@ export function Navbar({ openDrawer }: NavbarProps) {
         <MTNavbar
           blurred
           color="white"
-          className="z-50 mt-6 relative border-0 pr-3 py-3 pl-6"
-        >
+          className="z-50 mt-6 relative border-0 pr-3 py-3 pl-6" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        >
           <div className="flex items-center justify-between">
             <Image
               src={"/image/logos/logo.png"}
@@ -98,15 +96,14 @@ export function Navbar({ openDrawer }: NavbarProps) {
               variant="text"
               color="gray"
               onClick={handleOpen}
-              className="ml-auto inline-block lg:hidden"
-            >
+              className="ml-auto inline-block lg:hidden"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}            >
               {open ? (
                 <XMarkIcon strokeWidth={2} className="h-6 w-6" />
               ) : (
                 <Bars3Icon strokeWidth={2} className="h-6 w-6" />
               )}
             </IconButton>
-            <IconButton variant="text" onClick={openDrawer}>
+            <IconButton variant="text" onClick={openDrawer}  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
               <ShoppingCartIcon className="h-6 w-6" />
               <span className="absolute -top-1 -right-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs font-bold text-white">
                 {items.length}

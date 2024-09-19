@@ -18,10 +18,10 @@ function Customers() {
     <section className="py-8 px-8 lg:py-20">
       <div className="container mx-auto grid items-center place-items-center">
         <div className="text-center">
-          <Typography variant="h6" className="mb-4 uppercase !text-gray-500">
+          <Typography variant="h6" className="mb-4 uppercase !text-gray-500"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             AWESOME COMMUNITY
           </Typography>
-          <Typography variant="h2" color="blue-gray" className="mb-12">
+          <Typography variant="h2" color="blue-gray" className="mb-12" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             Trusted by over 200+ Companies
           </Typography>
         </div>

@@ -33,13 +33,12 @@ export function Feedback() {
     <section className="px-8 py-36">
       <div className="container mx-auto">
         <div className="mb-16 flex flex-col items-center w-full">
-          <Typography variant="h2" color="blue-gray" className="mb-2">
+          <Typography variant="h2" color="blue-gray" className="mb-2"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             What Our Customers Are Saying
           </Typography>
           <Typography
             variant="lead"
-            className="mb-10 max-w-3xl lg:text-center !text-gray-500"
-          >
+            className="mb-10 max-w-3xl lg:text-center !text-gray-500"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}          >
             What Our Customers Say
             Our mission is to provide service and comfort to our customers by providing good quality products so as to provide customer satisfaction
           </Typography>
