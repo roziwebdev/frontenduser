@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link"; 
 import Image from "next/image";
 import { Button, Typography, Card } from "@material-tailwind/react";
 
@@ -29,7 +29,9 @@ function Hero() {
             To deliver high values in printing and packaging, Arjaya has deployed a number of modern technologies, ranging from printing machines to coatings and die cut.
             </Typography>
             <div className="mb-8 flex justify-center gap-4 lg:justify-start">
-              <Button color="indigo" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>view all products</Button>
+              <Link href={"/shop"}>
+                <Button color="indigo" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>view all products</Button>
+              </Link>
             </div>
 
           </Card>
