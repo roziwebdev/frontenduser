@@ -3,10 +3,12 @@
 import React from "react";
 import { Typography } from "@material-tailwind/react";
 import {
-  DocumentTextIcon,
   PlayCircleIcon,
   PencilSquareIcon,
   PhoneArrowDownLeftIcon,
+  UserGroupIcon,
+  UserPlusIcon,
+  InboxStackIcon,
 } from "@heroicons/react/24/solid";
 
 import StatsCard from "@/components/StatsCard";
@@ -14,19 +16,19 @@ import StatsCard from "@/components/StatsCard";
 
 const STATS = [
   {
-    icon: DocumentTextIcon,
-    count: "10,200+",
-    title: "Students",
+    icon: UserPlusIcon,
+    count: "200+",
+    title: "Customers",
   },
   {
-    icon: PlayCircleIcon,
-    count: "50+",
-    title: "Instructors",
+    icon: UserGroupIcon,
+    count: "250+",
+    title: "Employees",
   },
   {
-    icon: PencilSquareIcon,
-    count: "10+",
-    title: "Courses",
+    icon: InboxStackIcon,
+    count: "100+",
+    title: "Products",
   },
   {
     icon: PhoneArrowDownLeftIcon,
@@ -47,8 +49,7 @@ export function Stats() {
             variant="lead"
             className="mx-auto mb-24 w-full !text-gray-500 lg:w-5/12"
           >
-            We take pride in our commitment to excellence and our dedication to
-            your success.
+          We are proud of our commitment to excellence and our dedication to customer service.
           </Typography>
         </div>
         <div className="grid gap-y-16 gap-x-10 md:grid-cols-2 lg:grid-cols-4">
@@ -60,3 +61,4 @@ export function Stats() {
     </section>
   );
 }
+export default Stats;

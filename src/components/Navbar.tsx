@@ -3,26 +3,30 @@ import React, { useEffect, useState } from "react";
 import {
   Navbar as MTNavbar,
   Collapse,
-  Button,
   IconButton,
   Typography,
 } from "@material-tailwind/react";
 import {
   RectangleStackIcon,
-  UserCircleIcon,
   XMarkIcon,
   Bars3Icon,
   ShoppingCartIcon,
+  ShoppingBagIcon,
 } from "@heroicons/react/24/solid";
+import { useCartStore } from "@/store/cartStore";
+import Image from "next/image";
+import Link from "next/link"; // Import Link from next/link
 
 const NAV_MENU = [
   {
-    name: "Page",
+    name: "Home",
     icon: RectangleStackIcon,
+    href: "/",
   },
   {
-    name: "Account",
-    icon: UserCircleIcon,
+    name: "Shop",
+    icon: ShoppingBagIcon,
+    href: "/shop",
   },
 ];
 
@@ -34,16 +38,16 @@ interface NavItemProps {
 function NavItem({ children, href }: NavItemProps) {
   return (
     <li>
-      <Typography
-        as="a"
-        href={href || "#"}
-        target={href ? "_blank" : "_self"}
-        variant="paragraph"
-        color="gray"
-        className="flex items-center gap-2 font-medium text-gray-900"
-      >
-        {children}
-      </Typography>
+      <Link href={href || "#"} > {/* Menggunakan Link */}
+        <Typography
+          as="span" // Mengganti "a" dengan "span" karena Link sudah menangani navigasi
+          variant="paragraph"
+          color="gray"
+          className="flex items-center gap-2 font-medium text-gray-900"
+        >
+          {children}
+        </Typography>
+      </Link>
     </li>
   );
 }
@@ -53,6 +57,7 @@ interface NavbarProps {
 }
 
 export function Navbar({ openDrawer }: NavbarProps) {
+  const { items } = useCartStore();
   const [open, setOpen] = useState(false);
 
   function handleOpen() {
@@ -75,9 +80,12 @@ export function Navbar({ openDrawer }: NavbarProps) {
           className="z-50 mt-6 relative border-0 pr-3 py-3 pl-6"
         >
           <div className="flex items-center justify-between">
-            <Typography color="blue-gray" className="text-lg font-bold">
-              Material Tailwind
-            </Typography>
+            <Image
+              src={"/image/logos/logo.png"}
+              width={100}
+              height={100}
+              alt="logo"
+            />
             <ul className="ml-10 hidden items-center gap-8 lg:flex">
               {NAV_MENU.map(({ name, icon: Icon, href }) => (
                 <NavItem key={name} href={href}>
@@ -99,17 +107,17 @@ export function Navbar({ openDrawer }: NavbarProps) {
               )}
             </IconButton>
             <IconButton variant="text" onClick={openDrawer}>
-                <ShoppingCartIcon className="h-6 w-6" />
-                <span className="absolute -top-1 -right-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs font-bold text-white">
-                  0
-                </span>
-              </IconButton>
+              <ShoppingCartIcon className="h-6 w-6" />
+              <span className="absolute -top-1 -right-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs font-bold text-white">
+                {items.length}
+              </span>
+            </IconButton>
           </div>
           <Collapse open={open}>
             <div className="container mx-auto mt-3 border-t border-gray-200 px-2 pt-4">
               <ul className="flex flex-col gap-4">
-                {NAV_MENU.map(({ name, icon: Icon }) => (
-                  <NavItem key={name}>
+                {NAV_MENU.map(({ name, icon: Icon, href }) => (
+                  <NavItem key={name} href={href}>
                     <Icon className="h-5 w-5" />
                     {name}
                   </NavItem>

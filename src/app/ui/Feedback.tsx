@@ -1,30 +1,30 @@
 "use client";
 import React from "react";
-import { Typography } from "@material-tailwind/react";
 import FeedbackCard from "@/components/FeedbackCard";
+import { Typography } from "@material-tailwind/react";
 
 
 const FEEDBACKS = [
   {
     feedback:
-      "The instructors are top-notch, and the hands-on approach to learning is incredibly effective.",
-    client: "Jessica Devis",
-    title: "Web Developer @ MARKETING DIGITAL LTD.",
-    img: "/image/avatar1.jpg",
+      "The products produced are good, and delivery accuracy is guaranteed, and one of the best choices for food packaging.",
+    client: "PT Indolakto",
+    title: "Purchasing Indolakto",
+    img: "/image/customers/indolakto.jpg",
   },
   {
     feedback:
-      "I went from knowing nothing about web development to landing my dream job as a frontend developer.",
-    client: "Linde Michel",
-    title: "Web Developer @ APPLE INC.",
-    img: "/image/avatar3.jpg",
+      "Providing good service, so that if there is a problem with the product sent it will be handled quickly, thank you for your cooperation",
+    client: "Mayora Group",
+    title: "QC Mayora Group",
+    img: "/image/customers/mayora.jpg",
   },
   {
     feedback:
-      "The courses are structured well, and the projects helped me build a strong portfolio.",
-    client: "Misha Stam",
-    title: "Web Developer @ APPLE INC.",
-    img: "/image/avatar2.jpg",
+      "I have been a customer for 10 years, the packaging is always strong and not easily damaged, PT Arjaya continues to be successful.",
+    client: "Maspion",
+    title: "Marketing Maspion.",
+    img: "/image/customers/pondan.jpeg",
   },
 ];
 
@@ -34,15 +34,14 @@ export function Feedback() {
       <div className="container mx-auto">
         <div className="mb-16 flex flex-col items-center w-full">
           <Typography variant="h2" color="blue-gray" className="mb-2">
-            What Our Students Are Saying
+            What Our Customers Are Saying
           </Typography>
           <Typography
             variant="lead"
             className="mb-10 max-w-3xl lg:text-center !text-gray-500"
           >
-            Our mission is to empower individuals with the knowledge and skills
-            they need to succeed in the world of web development. But don&apos;t
-            just take our word for it.
+            What Our Customers Say
+            Our mission is to provide service and comfort to our customers by providing good quality products so as to provide customer satisfaction
           </Typography>
         </div>
         <div className="grid gap-x-8 gap-y-12 lg:px-32 grid-cols-1 md:grid-cols-3">
